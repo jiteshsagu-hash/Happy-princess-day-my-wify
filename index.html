@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Princess Day 👑</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#fff0f3;--bg2:#ffd6df;--ink:#5a0a1c;--cherry:#c8102e;--cherry2:#8e0a20;--card:#ffffffd9;--soft:#ff8fa8;--shadow:#c8102e33;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2a0610;--bg2:#4a0a1c;--ink:#ffe3e9;--card:#3d0c1acc;--soft:#ff7d98;--shadow:#00000066}}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:'Quicksand',system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--bg1),var(--bg2));min-height:100vh;overflow-x:hidden;text-align:center}
+.script{font-family:'Dancing Script','Brush Script MT',cursive}
+section{padding:28px 18px;max-width:900px;margin:auto;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.4rem,11vw,4.6rem);margin:6px 0;color:var(--cherry);line-height:1.05;text-shadow:0 3px 0 #fff8}
+.crown{font-size:3rem;animation:bob 2.5s ease-in-out infinite}
+.sub{font-size:1.1rem;opacity:.85}
+.name{margin:14px auto 0;display:inline-block}
+.name input{font-family:'Dancing Script',cursive;font-size:2rem;text-align:center;width:min(80vw,320px);border:2px dashed var(--cherry);border-radius:30px;background:var(--card);color:var(--cherry);padding:6px 14px}
+.name small{display:block;opacity:.6;margin-top:4px}
+.deco{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:18px 0}
+.deco svg{width:78px;height:78px;filter:drop-shadow(0 6px 6px var(--shadow));animation:bob 3s ease-in-out infinite}
+.deco svg:nth-child(2n){animation-delay:.6s}.deco svg:nth-child(3n){animation-delay:1.1s}
+@keyframes bob{50%{transform:translateY(-9px) rotate(3deg)}}
+.btn{background:linear-gradient(135deg,#e8203f,var(--cherry2));color:#fff;border:0;border-radius:40px;font:700 1.1rem 'Quicksand',sans-serif;padding:14px 28px;box-shadow:0 8px 18px var(--shadow);cursor:pointer}
+.btn:active{transform:scale(.96)}
+.surprise{margin:18px auto 0;min-height:64px;font-size:1.35rem;color:var(--cherry);max-width:520px}
+h2{font-size:2.3rem;color:var(--cherry);margin:0 0 4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:16px}
+.wish{background:var(--card);border:2px solid var(--soft);border-radius:24px;padding:16px 12px;min-height:150px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 8px 16px var(--shadow);transition:transform .2s;font:inherit;color:inherit}
+.wish:hover{transform:translateY(-4px) rotate(-1deg)}
+.wish svg{width:48px;height:48px}
+.wish .t{font-weight:700;color:var(--cherry)}
+.wish .m{display:none;font-size:.95rem;line-height:1.35}
+.wish.open .m{display:block}.wish.open .t{font-size:.85rem;opacity:.7}
+.cute{background:var(--card);border-radius:30px;border:3px dotted var(--cherry);padding:22px 14px;box-shadow:0 10px 22px var(--shadow)}
+.cute .deco svg{width:64px;height:64px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.tags span{background:var(--cherry);color:#fff;border-radius:20px;padding:6px 14px;font-weight:700;font-size:.9rem}
+.final{font-size:1.2rem;line-height:1.7}
+.final .script{font-size:2.4rem;color:var(--cherry);display:block;margin-top:10px}
+footer{padding:20px 0 30px;opacity:.7;font-size:.9rem}
+.fall{position:fixed;top:-40px;z-index:1;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(115vh) rotate(360deg)}}
+.pop{position:fixed;z-index:9;pointer-events:none;font-size:1.8rem;animation:pop 1.3s ease-out forwards}
+@keyframes pop{to{transform:translate(var(--x),var(--y)) scale(1.3);opacity:0}}
+.tpl{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
+.tpl button{border:2px solid var(--cherry);background:var(--card);color:var(--cherry);border-radius:20px;padding:6px 12px;font:700 .85rem 'Quicksand',sans-serif;cursor:pointer}
+.tpl button.on{background:var(--cherry);color:#fff}
+body{background-attachment:fixed}
+:root[data-style="lotus"]{--bg1:#fff4fc;--bg2:#e9d4f7;--ink:#4a1a5e;--cherry:#d6336c;--cherry2:#9c1f6b;--card:#ffffffd9;--soft:#d9a6f0;--shadow:#9c1f6b33}
+:root[data-style="lotus"] body{background-image:radial-gradient(circle at 20% 15%,#ffc9e6aa 0 90px,transparent 91px),radial-gradient(circle at 85% 60%,#d9b3ffaa 0 120px,transparent 121px),linear-gradient(180deg,var(--bg1),var(--bg2))}
+:root[data-style="lotus"] .wish{border-radius:70px 70px 24px 24px}
+:root[data-style="rose"]{--bg1:#4a0614;--bg2:#8a0f2b;--ink:#fff0f3;--cherry:#ff5272;--cherry2:#c8102e;--card:#5a0a1ccc;--soft:#ff8fa8;--shadow:#0006}
+:root[data-style="rose"] body{background-image:radial-gradient(#ff5272 2px,transparent 2.5px),linear-gradient(180deg,var(--bg1),var(--bg2));background-size:34px 34px,auto}
+:root[data-style="rose"] .wish{border-radius:10px;border-width:3px}
+:root[data-style="rose"] h1{text-shadow:0 3px 0 #0006}
+:root[data-style="plush"]{--bg1:#fff8ee;--bg2:#ffdcc8;--ink:#5b2a1e;--cherry:#e0314b;--cherry2:#a8142e;--card:#fffffff0;--soft:#ffb59a;--shadow:#a8142e30}
+:root[data-style="plush"] body{background-image:radial-gradient(#ffb59a88 6px,transparent 7px),linear-gradient(180deg,var(--bg1),var(--bg2));background-size:48px 48px,auto}
+:root[data-style="plush"] .wish{border-radius:44px;border-style:dashed}
+:root[data-style="plush"] .cute{border-radius:50px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<radialGradient id="gc" cx="35%" cy="30%"><stop offset="0" stop-color="#ff5a74"/><stop offset="1" stop-color="#a30a22"/></radialGradient>
+<linearGradient id="gp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe1ea"/><stop offset="1" stop-color="#ff7fa3"/></linearGradient>
+<symbol id="lotus" viewBox="0 0 100 100">
+<g fill="url(#gp)" stroke="#e0507a" stroke-width="1.5">
+<ellipse cx="50" cy="58" rx="10" ry="30" transform="rotate(-70 50 88)"/><ellipse cx="50" cy="58" rx="10" ry="30" transform="rotate(70 50 88)"/>
+<ellipse cx="50" cy="58" rx="10" ry="30" transform="rotate(-38 50 88)"/><ellipse cx="50" cy="58" rx="10" ry="30" transform="rotate(38 50 88)"/>
+<ellipse cx="50" cy="56" rx="10" ry="31"/></g>
+<path d="M18 90q32 8 64 0" stroke="#3f9a5a" stroke-width="5" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="rose" viewBox="0 0 100 100">
+<path d="M50 70q-30 0-38 22q22 0 38-12zM50 70q30 0 38 22q-22 0-38-12z" fill="#3f9a5a"/>
+<circle cx="50" cy="45" r="36" fill="url(#gc)"/>
+<g fill="none" stroke="#6b0618" stroke-width="3" stroke-linecap="round"><path d="M50 45m-24 0a24 24 0 1 1 24 24"/><path d="M50 45m-14 0a14 14 0 1 1 14 14"/><path d="M50 45m-6 0a6 6 0 1 1 6 6"/></g></symbol>
+<symbol id="cherry" viewBox="0 0 100 100">
+<path d="M32 66Q40 25 62 10M70 62Q70 28 62 10" stroke="#3f9a5a" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M62 10q18-4 24 8q-16 6-24-8z" fill="#4fb36d"/>
+<circle cx="30" cy="72" r="20" fill="url(#gc)"/><circle cx="70" cy="68" r="20" fill="url(#gc)"/>
+<circle cx="23" cy="65" r="5" fill="#fff" opacity=".6"/><circle cx="63" cy="61" r="5" fill="#fff" opacity=".6"/></symbol>
+<symbol id="gloss" viewBox="0 0 100 100">
+<rect x="40" y="6" width="20" height="38" rx="7" fill="#7a0618"/><rect x="43" y="10" width="4" height="28" rx="2" fill="#fff" opacity=".4"/>
+<rect x="34" y="42" width="32" height="52" rx="10" fill="url(#gc)"/>
+<rect x="39" y="48" width="5" height="40" rx="2.5" fill="#fff" opacity=".45"/>
+<path d="M50 80l-9-9a5 5 0 0 1 9-4a5 5 0 0 1 9 4z" fill="#ffd6df"/></symbol>
+<symbol id="teddy" viewBox="0 0 100 100">
+<circle cx="24" cy="26" r="13" fill="#b8734a"/><circle cx="76" cy="26" r="13" fill="#b8734a"/>
+<circle cx="24" cy="26" r="6" fill="#ffb3c4"/><circle cx="76" cy="26" r="6" fill="#ffb3c4"/>
+<circle cx="50" cy="52" r="34" fill="#c98558"/><ellipse cx="50" cy="64" rx="15" ry="11" fill="#ffe6cf"/>
+<circle cx="38" cy="46" r="4" fill="#3b1a10"/><circle cx="62" cy="46" r="4" fill="#3b1a10"/>
+<ellipse cx="50" cy="59" rx="5" ry="3.5" fill="#3b1a10"/><path d="M50 62v4M44 68q6 5 12 0" stroke="#3b1a10" stroke-width="2" fill="none" stroke-linecap="round"/>
+<circle cx="31" cy="58" r="5" fill="#ff8fa8" opacity=".6"/><circle cx="69" cy="58" r="5" fill="#ff8fa8" opacity=".6"/>
+<path d="M50 90l-18-10v20zM50 90l18-10v20z" fill="#c8102e"/><circle cx="50" cy="90" r="5" fill="#8e0a20"/></symbol>
+</defs></svg>
+
+<section class="hero">
+<div class="tpl" id="tpl"><button data-s="">🍒 Cherry</button><button data-s="lotus">🪷 Lotus</button><button data-s="rose">🌹 Rose</button><button data-s="plush">🧸 Plushie</button></div>
+<div class="crown">👑</div>
+<div class="script" style="font-size:1.8rem;color:var(--cherry)">Happy</div>
+<h1 class="script">Princess Day</h1>
+<div class="sub">to the queen of my heart ❤️</div>
+<div class="name"><input id="nm" value="Puchi" maxlength="24" aria-label="Her name"><small>✏️ tap to write her name</small></div>
+<div class="deco">
+<svg><use href="#lotus"/></svg><svg><use href="#rose"/></svg><svg><use href="#cherry"/></svg><svg><use href="#gloss"/></svg><svg><use href="#teddy"/></svg>
+</div>
+<button class="btn" id="go">🍒 Open a surprise wish</button>
+<div class="surprise script" id="sur">Tap the button, my love…</div>
+</section>
+
+<section>
+<h2 class="script">Wishes for you</h2>
+<div class="sub">Tap each one to open it 💌</div>
+<div class="grid" id="grid"></div>
+</section>
+
+<section>
+<div class="cute">
+<h2 class="script">Cute little things for my cutie</h2>
+<div class="deco"><svg><use href="#teddy"/></svg><svg><use href="#gloss"/></svg><svg><use href="#cherry"/></svg><svg><use href="#teddy"/></svg><svg><use href="#gloss"/></svg></div>
+<div class="sub">A tiny plushie hug, a cherry red lip gloss shine, and a heart full of you.</div>
+<div class="tags"><span>🧸 Plushie hugs</span><span>🍒 Cherry red</span><span>💄 Lip gloss</span><span>🌸 Lotus</span><span>🌹 Roses</span><span>🎀 Bows</span></div>
+</div>
+</section>
+
+<section class="final">
+<svg width="90" height="90"><use href="#lotus"/></svg><svg width="90" height="90"><use href="#rose"/></svg>
+<p>You are my princess today and every day.<br>Thank you for your love, your smile, and your little cute ways that make my world softer and brighter.</p>
+<span class="script">I love you, <span id="nm2">Puchi</span> 🍒</span>
+</section>
+<footer>Made with love, just for you 💖</footer>
+
+<script>
+var W=[
+["🌸","Be Happy","May every day bring you smiles as pretty as a lotus in bloom."],
+["🌹","Be Loved","May you always be wrapped in love, like a bouquet of red roses."],
+["🍒","Be Sweet","May life be as sweet and shiny as cherry red."],
+["🧸","Be Cozy","May you get endless soft hugs, just like your favourite plushie."],
+["💄","Be Glowing","May you shine every day, cherry gloss and all."],
+["👑","Be Queenly","You deserve to be treated like a princess, always."],
+["🎀","Be Playful","May your life be full of cute little surprises and giggles."],
+["✨","Be Fulfilled","May all your dreams come true, big and small."],
+["🌷","Be Healthy","May you stay healthy, strong and peaceful."],
+["💖","Be Cherished","I will always cherish you, in every moment."],
+["🦋","Be Free","May you fly high and chase everything you love."],
+["🏡","Be Home","I will always be your safe and happy place."]];
+var g=document.getElementById('grid');
+W.forEach(function(w){var b=document.createElement('button');b.className='wish';
+b.innerHTML='<div style="font-size:2.2rem">'+w[0]+'</div><div class="t">'+w[1]+'</div><div class="m">'+w[2]+'</div>';
+b.onclick=function(){b.classList.toggle('open');burst(b)};g.appendChild(b)});
+var SETS={'':['🌸','🪷','🌹','🍒','🎀','🧸','💖','💄'],lotus:['🪷','🪷','🌸','💜','✨','🦋'],rose:['🌹','🌹','❤️','🥀','💖','🍒'],plush:['🧸','🎀','🍒','🍑','⭐','💖']};
+var E=SETS[''];
+function fall(){var s=document.createElement('div');s.className='fall';s.textContent=E[Math.random()*E.length|0];
+s.style.left=Math.random()*100+'vw';s.style.fontSize=(16+Math.random()*18)+'px';s.style.animationDuration=(7+Math.random()*7)+'s';
+document.body.appendChild(s);setTimeout(function(){s.remove()},15000)}
+setInterval(fall,900);for(var i=0;i<6;i++)setTimeout(fall,i*300);
+function burst(el){var r=el.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
+for(var i=0;i<8;i++){var p=document.createElement('div');p.className='pop';p.textContent=['💖','🍒','🌸','🌹'][i%4];
+p.style.left=cx+'px';p.style.top=cy+'px';var a=i/8*6.28;
+p.style.setProperty('--x',Math.cos(a)*90+'px');p.style.setProperty('--y',Math.sin(a)*90+'px');
+document.body.appendChild(p);setTimeout(function(q){q.remove()},1400,p)}}
+var go=document.getElementById('go'),sur=document.getElementById('sur'),n=0;
+go.onclick=function(){var w=W[n++%W.length];sur.textContent=w[0]+' '+w[2];burst(go)};
+function setName(v){document.getElementById('nm2').textContent=v||'Puchi'}
+var nm=document.getElementById('nm');
+try{var s=localStorage.getItem('pn2');if(s){nm.value=s;setName(s)}}catch(e){}
+nm.oninput=function(){setName(nm.value);try{localStorage.setItem('pn2',nm.value)}catch(e){}};
+var tb=document.querySelectorAll('#tpl button');
+function setStyle(s){var d=document.documentElement;if(s)d.setAttribute('data-style',s);else d.removeAttribute('data-style');E=SETS[s]||SETS[''];
+tb.forEach(function(b){b.classList.toggle('on',b.dataset.s===s)});try{localStorage.setItem('ps',s)}catch(e){}}
+tb.forEach(function(b){b.onclick=function(){setStyle(b.dataset.s);burst(b)}});
+var st='';try{st=localStorage.getItem('ps')||''}catch(e){}
+setStyle(st);
+</script>
+</body>
+</html>
